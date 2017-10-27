@@ -1,9 +1,11 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Graphics;
 
 partial class Player : AnimatedGameObject
 {
+    
     protected Vector2 startPosition;
     protected bool isOnTheGround;
     protected float previousYPosition;
@@ -75,6 +77,10 @@ partial class Player : AnimatedGameObject
     public override void Update(GameTime gameTime)
     {
         base.Update(gameTime);
+
+
+        
+
         if (!finished && isAlive)
         {
             if (isOnTheGround)
