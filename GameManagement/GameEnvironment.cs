@@ -16,7 +16,7 @@ public class GameEnvironment : Game
     protected static Random random;
     protected static AssetManager assetManager;
     protected static GameSettingsManager gameSettingsManager;
-    protected static Camera cam;
+    static Camera cam;
 
     public GameEnvironment()
     {
@@ -59,7 +59,7 @@ public class GameEnvironment : Game
 
     public static Camera Camera
     {
-        get { return cam;  }
+        get { return cam; }
     }
 
     public bool FullScreen
@@ -147,20 +147,4 @@ public class GameEnvironment : Game
 }
 
 
-public class Camera : GameObject
 
-{  
-    public Camera():base (0,"camera")
-        {
-        position = new Vector2(0, 0);
-       
-
-        }
-    public override void Update(GameTime gameTime)
-    {
-        base.Update(gameTime);
-       
-    }
-   
-   
-}

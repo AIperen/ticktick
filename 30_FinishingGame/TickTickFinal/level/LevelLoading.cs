@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 
 partial class Level : GameObjectList
 {
+    public Vector2 LevelSize;
     public void LoadTiles(string path)
     {
         List<string> textLines = new List<string>();
@@ -42,6 +43,7 @@ partial class Level : GameObjectList
                 tiles.Add(t, x, y);
             }
         }
+        LevelSize = new Vector2(tiles.CellWidth * width, tiles.CellHeight * (textLines.Count - 1));
     }
 
     private Tile LoadTile(char tileType, int x, int y)

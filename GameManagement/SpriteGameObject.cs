@@ -23,12 +23,8 @@ public class SpriteGameObject : GameObject
 
     public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
     {
-        Camera camera = GameWorld.Find("camera") as Camera;
-        if(camera ==  null)
-        {
-            camera = new Camera();
-
-        }
+        Camera camera = GameEnvironment.Camera;
+       
         if (!visible || sprite == null)
         {
             return;
