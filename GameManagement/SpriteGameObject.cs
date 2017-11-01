@@ -6,11 +6,15 @@ public class SpriteGameObject : GameObject
     protected SpriteSheet sprite;
     protected Vector2 origin;
     public bool PerPixelCollisionDetection = true;
-    
+    public bool CameraFollow ;
+    public bool ParallaxFollow;
 
-    public SpriteGameObject(string assetName, int layer = 0, string id = "", int sheetIndex = 0)
+    public SpriteGameObject(string assetName, int layer = 0, string id = "", int sheetIndex = 0, bool CameraFollow = true, bool ParallaxFollow = false)
         : base(layer, id)
     {
+        this.CameraFollow = CameraFollow;
+        
+
         if (assetName != "")
         {
             sprite = new SpriteSheet(assetName, sheetIndex);
@@ -23,14 +27,28 @@ public class SpriteGameObject : GameObject
 
     public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
     {
+        
+
         Camera camera = GameEnvironment.Camera;
-       
+        
         if (!visible || sprite == null)
         {
             return;
         }
-        sprite.Draw(spriteBatch, this.GlobalPosition - camera.Position, origin);
-        
+        if (CameraFollow == true && ParallaxFollow == false)
+        {
+            sprite.Draw(spriteBatch, this.GlobalPosition - camera.Position, origin);
+            
+        }
+        else if (CameraFollow == false)
+        {    
+            sprite.Draw(spriteBatch, this.GlobalPosition, origin);
+        }
+       if (ParallaxFollow == true)
+        {
+            sprite.Draw(spriteBatch, this.GlobalPosition - camera.Position * 0.25f, origin);
+        }
+
     }
 
     public SpriteSheet Sprite

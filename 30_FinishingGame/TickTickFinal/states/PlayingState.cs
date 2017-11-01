@@ -59,10 +59,12 @@ class PlayingState : IGameLoopObject
             CurrentLevel.Solved = true;
             GameEnvironment.GameStateManager.SwitchTo("levelFinishedState");
         }
-
+        
         GameObject player = CurrentLevel.Find("player");
         if (player != null)
         {
+            
+            
             //GameEnvironment.Camera.Position = player.GlobalPosition - GameEnvironment.Screen.ToVector2() / 2;
             GameEnvironment.Camera.Position = new Vector2(MathHelper.Clamp(player.GlobalPosition.X - GameEnvironment.Screen.X / 2, 0, CurrentLevel.LevelSize.X - GameEnvironment.Screen.X),
                                                           MathHelper.Clamp(player.GlobalPosition.Y - GameEnvironment.Screen.Y / 2, 0, CurrentLevel.LevelSize.Y - GameEnvironment.Screen.Y));
