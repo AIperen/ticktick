@@ -12,6 +12,7 @@ class LevelMenuState : GameObjectList
 
         // add a background
         SpriteGameObject background = new SpriteGameObject("Backgrounds/spr_levelselect", 0, "background");
+        background.CameraFollow = false;
         Add(background);
 
         // add the level buttons
