@@ -59,28 +59,27 @@ class PlayingState : IGameLoopObject
             CurrentLevel.Solved = true;
             GameEnvironment.GameStateManager.SwitchTo("levelFinishedState");
         }
-<<<<<<< HEAD
-        
-        GameObject player = CurrentLevel.Find("player");
-        if (player != null)
-        {
-            
-            
-            //GameEnvironment.Camera.Position = player.GlobalPosition - GameEnvironment.Screen.ToVector2() / 2;
-=======
 
-        GameObject player = CurrentLevel.Find("player");            //Camera positie en mee beweging
-        if (player != null)
-        {
->>>>>>> f268b1fa81ad02943b8386079cf0a40b3b355e45
-            GameEnvironment.Camera.Position = new Vector2(MathHelper.Clamp(player.GlobalPosition.X - GameEnvironment.Screen.X / 2, 0, CurrentLevel.LevelSize.X - GameEnvironment.Screen.X),
-                                                          MathHelper.Clamp(player.GlobalPosition.Y - GameEnvironment.Screen.Y / 2, 0, CurrentLevel.LevelSize.Y - GameEnvironment.Screen.Y));
+
+       
+
+
+            //GameEnvironment.Camera.Position = player.GlobalPosition - GameEnvironment.Screen.ToVector2() / 2;
+
+
+            GameObject player = CurrentLevel.Find("player");            //Camera positie en mee beweging
+            if (player != null)
+            {
+
+                GameEnvironment.Camera.Position = new Vector2(MathHelper.Clamp(player.GlobalPosition.X - GameEnvironment.Screen.X / 2, 0, CurrentLevel.LevelSize.X - GameEnvironment.Screen.X),
+                                                              MathHelper.Clamp(player.GlobalPosition.Y - GameEnvironment.Screen.Y / 2, 0, CurrentLevel.LevelSize.Y - GameEnvironment.Screen.Y));
+            }
+            else
+            {
+                GameEnvironment.Camera.Position = Vector2.Zero;
+            }
         }
-        else
-        {
-            GameEnvironment.Camera.Position = Vector2.Zero;
-        }
-    }
+    
 
     public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
     {
