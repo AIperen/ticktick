@@ -6,7 +6,7 @@ partial class Level : GameObjectList
 {
     public Vector2 LevelSize;
     public void LoadTiles(string path)
-    {
+    {   
         List<string> textLines = new List<string>();
         StreamReader fileReader = new StreamReader(path);
         string line = fileReader.ReadLine();
@@ -19,9 +19,12 @@ partial class Level : GameObjectList
         TileField tiles = new TileField(textLines.Count - 1, width, 1, "tiles");
 
         GameObjectList hintField = new GameObjectList(100);
+        
         Add(hintField);
+        
         string hint = textLines[textLines.Count - 1];
         SpriteGameObject hintFrame = new SpriteGameObject("Overlays/spr_frame_hint", 1);
+        hintFrame.CameraFollow = false;
         hintField.Position = new Vector2((GameEnvironment.Screen.X - hintFrame.Width) / 2, 10);
         hintField.Add(hintFrame);
         TextGameObject hintText = new TextGameObject("Fonts/HintFont", 2);

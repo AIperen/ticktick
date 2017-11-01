@@ -10,6 +10,7 @@ class GameOverState : GameObjectList
     {
         playingState = GameEnvironment.GameStateManager.GetGameState("playingState");
         SpriteGameObject overlay = new SpriteGameObject("Overlays/spr_gameover");
+        overlay.CameraFollow = false;
         overlay.Position = new Vector2(GameEnvironment.Screen.X, GameEnvironment.Screen.Y) / 2 - overlay.Center;
         Add(overlay);
     }
@@ -26,11 +27,13 @@ class GameOverState : GameObjectList
 
     public override void Update(GameTime gameTime)
     {
+        
         playingState.Update(gameTime);
     }
 
     public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
     {
+        
         playingState.Draw(gameTime, spriteBatch);
         base.Draw(gameTime, spriteBatch);
     }
