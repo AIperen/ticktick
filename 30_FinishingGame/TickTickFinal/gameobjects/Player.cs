@@ -78,9 +78,6 @@ partial class Player : AnimatedGameObject
     {
         base.Update(gameTime);
 
-
-        
-
         if (!finished && isAlive)
         {
             if (isOnTheGround)
