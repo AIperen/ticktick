@@ -267,3 +267,6 @@ C:\Users\Alijt Rijcken\Documents\GitHub\ticktick\30_FinishingGame\TickTickFinal\
 C:\Users\Alijt Rijcken\Documents\GitHub\ticktick\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\Sprites\bullet.png
 C:\Users\Alijt Rijcken\Documents\GitHub\ticktick\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\Sprites\spr_button_back.png
 C:\Users\Alijt Rijcken\Documents\GitHub\ticktick\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\bullet1.xnb
+C:\Users\alper\OneDrive\Documenten\GitHub\ticktick2\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\Sprites\bullet.png
+C:\Users\alper\OneDrive\Documenten\GitHub\ticktick2\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\bom.xnb
+C:\Users\alper\OneDrive\Documenten\GitHub\ticktick2\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\bullet1.xnb
