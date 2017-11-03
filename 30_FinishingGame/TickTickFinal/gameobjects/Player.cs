@@ -142,7 +142,7 @@ partial class Player : AnimatedGameObject
         Bullet bullet = new Bullet(position);
         bullet.Velocity = new Vector2(500, 0);
         if (Mirror)
-            this.Velocity = new Vector2(-500, 0);
+            bullet.Velocity = new Vector2(-500, 0);
 
         (GameWorld.Find("bullets") as GameObjectList).Add(bullet);
         isShooting = true;
