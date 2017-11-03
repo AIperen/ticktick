@@ -76,7 +76,7 @@ partial class Player : AnimatedGameObject
             Jump();
         }
 
-        if (inputHelper.KeyPressed(Keys.W) && isShooting == false)
+        if (inputHelper.KeyPressed(Keys.W) && isShooting == false)              //Key W is om mee te shooten
         {
             Shoot();
         }
@@ -137,9 +137,13 @@ partial class Player : AnimatedGameObject
         DoPhysics();
     }
 
-    public void Shoot()
+    public void Shoot()                     //Shoot methode, met Clock en bool isShooting voor schieten
     {
         Bullet bullet = new Bullet(position);
+        bullet.Velocity = new Vector2(500, 0);
+        if (Mirror)
+            this.Velocity = new Vector2(-500, 0);
+
         (GameWorld.Find("bullets") as GameObjectList).Add(bullet);
         isShooting = true;
         Clock = 20f;

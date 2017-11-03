@@ -30,7 +30,7 @@ class Rocket : AnimatedGameObject
             spawnTime -= gameTime.ElapsedGameTime.TotalSeconds;
             return;
         }
-        if(visible == false)
+        if(visible == false)                    //Zorgt dat Rocket verdwijnt als hij is geraakt
         {
             Reset();
         }

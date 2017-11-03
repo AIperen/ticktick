@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 {
     public Camera() : base(0, "camera")
     {
-        position = new Vector2(0, 0);
+        position = new Vector2(0, 0);                   //position van de camera
 
 
     }

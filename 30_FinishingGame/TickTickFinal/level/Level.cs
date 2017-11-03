@@ -20,7 +20,7 @@ partial class Level : GameObjectList
             SpriteGameObject mountain = new SpriteGameObject("Backgrounds/spr_mountain_" + (GameEnvironment.Random.Next(2) + 1), i);
             
             mountain.Position = new Vector2((float)GameEnvironment.Random.NextDouble() * GameEnvironment.Screen.X - mountain.Width / 2, 
-                GameEnvironment.Screen.Y);
+                GameEnvironment.Screen.Y - mountain.Height);
             mountain.ParallaxFollow = true;
             backgrounds.Add(mountain);
         }
@@ -47,7 +47,7 @@ partial class Level : GameObjectList
 
         Add(new GameObjectList(1, "waterdrops"));
         Add(new GameObjectList(2, "enemies"));
-        Add(new GameObjectList(2, "bullets"));
+        Add(new GameObjectList(2, "bullets"));                      //nieuwe bullet Lis aan maken, op Layer twee, aangezien de enemies daar ook zitten.
 
         LoadTiles("Content/Levels/" + levelIndex + ".txt");
     }

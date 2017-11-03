@@ -36,7 +36,7 @@ public class GameObjectList : GameObject
         obj.Parent = null;
     }
 
-    public void RemoveEverything()
+    public void RemoveEverything()              //verwijdert de bullets
     {
         children.Clear();
     }

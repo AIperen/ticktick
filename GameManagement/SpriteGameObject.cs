@@ -7,12 +7,12 @@ public class SpriteGameObject : GameObject
     protected Vector2 origin;
     public bool PerPixelCollisionDetection = true;
     public bool CameraFollow ;
-    public bool ParallaxFollow;
+    public bool ParallaxFollow;                 //zorgt er voor dat wanneer true Parallax follow aan staat
 
     public SpriteGameObject(string assetName, int layer = 0, string id = "", int sheetIndex = 0, bool CameraFollow = true, bool ParallaxFollow = false)
         : base(layer, id)
     {
-        this.CameraFollow = CameraFollow;
+        this.CameraFollow = CameraFollow;              
         
 
         if (assetName != "")

@@ -1,18 +1,14 @@
 ﻿using Microsoft.Xna.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 
+// Bullet Class 
 class Bullet : SpriteGameObject
 {
     public Bullet( Vector2 position, int layer = 0, string id = "") : base ("bullet", layer, id)
-    {
-        this.position.Y = position.Y - 50;
+    {   //Bullet Position
+        this.position.Y = position.Y - 50; 
         this.position.X = position.X + 50;
-        this.velocity = new Vector2(300, 0);
+
     }
 
     public override void Update(GameTime gameTime)
@@ -21,7 +17,7 @@ class Bullet : SpriteGameObject
         HitEnemies();
     }
 
-    public bool HitEnemies()
+    public bool HitEnemies()                    //checkt collision met enemies en zet ze op Visible = false wanneer dit het geval is
     {
         GameObjectList enemies = GameWorld.Find("enemies") as GameObjectList;
         if (enemies != null)
