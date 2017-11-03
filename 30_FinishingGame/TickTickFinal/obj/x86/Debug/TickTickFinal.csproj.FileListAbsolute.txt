@@ -263,3 +263,5 @@ C:\Users\alper\OneDrive\Documenten\GitHub\ticktick2\30_FinishingGame\TickTickFin
 C:\Users\alper\OneDrive\Documenten\GitHub\ticktick2\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
 C:\Users\alper\OneDrive\Documenten\GitHub\ticktick2\30_FinishingGame\TickTickFinal\obj\x86\Debug\TickTickFinal.csprojResolveAssemblyReference.cache
 C:\Users\alper\OneDrive\Documenten\GitHub\ticktick2\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\bullet.xnb
+C:\Users\Alijt Rijcken\Documents\GitHub\ticktick\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\bullet.xnb
+C:\Users\Alijt Rijcken\Documents\GitHub\ticktick\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\Sprites\bullet.png
