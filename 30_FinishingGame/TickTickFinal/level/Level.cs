@@ -20,7 +20,7 @@ partial class Level : GameObjectList
             SpriteGameObject mountain = new SpriteGameObject("Backgrounds/spr_mountain_" + (GameEnvironment.Random.Next(2) + 1), i);
             
             mountain.Position = new Vector2((float)GameEnvironment.Random.NextDouble() * GameEnvironment.Screen.X - mountain.Width / 2, 
-                GameEnvironment.Screen.Y - mountain.Height);
+                GameEnvironment.Screen.Y);
             mountain.ParallaxFollow = true;
             backgrounds.Add(mountain);
         }
