@@ -30,6 +30,10 @@ class Rocket : AnimatedGameObject
             spawnTime -= gameTime.ElapsedGameTime.TotalSeconds;
             return;
         }
+        if(visible == false)
+        {
+            Reset();
+        }
         visible = true;
         velocity.X = 600;
         if (Mirror)

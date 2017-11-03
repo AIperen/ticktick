@@ -13,6 +13,8 @@ partial class Player : AnimatedGameObject
     protected bool exploded;
     protected bool finished;
     protected bool walkingOnIce, walkingOnHot;
+    protected bool isShooting = false;
+    protected float Clock;
 
     public Player(Vector2 start) : base(2, "player")
     {
@@ -33,6 +35,7 @@ partial class Player : AnimatedGameObject
         velocity = Vector2.Zero;
         isOnTheGround = true;
         isAlive = true;
+        isShooting = false;
         exploded = false;
         finished = false;
         walkingOnIce = false;
@@ -72,6 +75,12 @@ partial class Player : AnimatedGameObject
         {
             Jump();
         }
+
+        if (inputHelper.KeyPressed(Keys.W) && isShooting == false)
+        {
+            Shoot();
+        }
+
     }
 
     public override void Update(GameTime gameTime)
@@ -115,9 +124,26 @@ partial class Player : AnimatedGameObject
             {
                 Die(true);
             }
+            if (Clock <= 0f)
+            {
+                isShooting = false;
+            }
+            else if( Clock > 0f) 
+            {
+                Clock -= 1f;
+            }
         }
 
         DoPhysics();
+    }
+
+    public void Shoot()
+    {
+        Bullet bullet = new Bullet(position);
+        (GameWorld.Find("bullets") as GameObjectList).Add(bullet);
+        isShooting = true;
+        Clock = 20f;
+         
     }
 
     public void Explode()

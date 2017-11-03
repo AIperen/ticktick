@@ -125,7 +125,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <MonoGameContentReference Include="Content\Content.mgcb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </MonoGameContentReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\..\assets\ticktick\backgrounds\spr_cloud_1.png">
@@ -351,6 +353,7 @@
     <Content Include="Content\Sprites\bullet.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Sprites\bullet1.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\..\assets\ticktick\fonts\HintFont.xnb">

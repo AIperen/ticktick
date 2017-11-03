@@ -126,7 +126,6 @@ C:\Users\Alijt Rijcken\Documents\GitHub\ticktick\30_FinishingGame\TickTickFinal\
 C:\Users\Alijt Rijcken\Documents\GitHub\ticktick\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\Sprites\Sparky\spr_electrocute@6x5.png
 C:\Users\Alijt Rijcken\Documents\GitHub\ticktick\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\Sprites\Sparky\spr_electrocute.png
 C:\Users\Alijt Rijcken\Documents\GitHub\ticktick\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\Sprites\Sparky\spr_idle.png
-C:\Users\Alijt Rijcken\Documents\GitHub\ticktick\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\Sprites\spr_button_back.png
 C:\Users\Alijt Rijcken\Documents\GitHub\ticktick\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\Sprites\spr_button_help.png
 C:\Users\Alijt Rijcken\Documents\GitHub\ticktick\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\Sprites\spr_button_play.png
 C:\Users\Alijt Rijcken\Documents\GitHub\ticktick\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\Sprites\spr_button_quit.png
@@ -264,4 +263,7 @@ C:\Users\alper\OneDrive\Documenten\GitHub\ticktick2\30_FinishingGame\TickTickFin
 C:\Users\alper\OneDrive\Documenten\GitHub\ticktick2\30_FinishingGame\TickTickFinal\obj\x86\Debug\TickTickFinal.csprojResolveAssemblyReference.cache
 C:\Users\alper\OneDrive\Documenten\GitHub\ticktick2\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\bullet.xnb
 C:\Users\Alijt Rijcken\Documents\GitHub\ticktick\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\bullet.xnb
+C:\Users\Alijt Rijcken\Documents\GitHub\ticktick\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\bom.xnb
 C:\Users\Alijt Rijcken\Documents\GitHub\ticktick\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\Sprites\bullet.png
+C:\Users\Alijt Rijcken\Documents\GitHub\ticktick\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\Sprites\spr_button_back.png
+C:\Users\Alijt Rijcken\Documents\GitHub\ticktick\30_FinishingGame\TickTickFinal\bin\Windows\x86\Debug\Content\bullet1.xnb

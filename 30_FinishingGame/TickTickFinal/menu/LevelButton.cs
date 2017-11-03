@@ -17,6 +17,9 @@ class LevelButton : GameObjectList
         levelsSolved = new SpriteGameObject("Sprites/spr_level_solved", 0, "", levelIndex - 1);
         levelsUnsolved = new SpriteGameObject("Sprites/spr_level_unsolved");
         sprLock = new SpriteGameObject("Sprites/spr_level_locked", 2);
+        levelsSolved.CameraFollow = false;
+        levelsUnsolved.CameraFollow = false;
+        sprLock.CameraFollow = false;
         Add(levelsSolved);
         Add(levelsUnsolved);
         Add(sprLock);

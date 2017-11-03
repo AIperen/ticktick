@@ -36,6 +36,11 @@ public class GameObjectList : GameObject
         obj.Parent = null;
     }
 
+    public void RemoveEverything()
+    {
+        children.Clear();
+    }
+
     public GameObject Find(string id)
     {
         foreach (GameObject obj in children)
