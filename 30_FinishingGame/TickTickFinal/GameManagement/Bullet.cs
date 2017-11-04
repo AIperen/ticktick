@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-
-// Bullet Class 
+ 
 class Bullet : SpriteGameObject
 {
     public Bullet( Vector2 position, int layer = 0, string id = "") : base ("bullet", layer, id)

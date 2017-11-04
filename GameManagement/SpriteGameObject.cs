@@ -46,7 +46,7 @@ public class SpriteGameObject : GameObject
         }
        if (ParallaxFollow == true)
         {
-            sprite.Draw(spriteBatch, new Vector2( this.GlobalPosition.X - camera.Position.X * 0.25f * layer, GlobalPosition.Y - camera.Position.Y), origin);
+            sprite.Draw(spriteBatch, new Vector2( this.GlobalPosition.X - camera.Position.X * 0.5f * layer, GlobalPosition.Y - camera.Position.Y), origin);
         }
 
     }

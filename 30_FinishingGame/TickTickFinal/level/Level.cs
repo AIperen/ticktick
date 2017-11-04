@@ -35,9 +35,6 @@ partial class Level : GameObjectList
         timerBackground.CameraFollow = false;
         Add(timerBackground);
 
-        TimerGameObject timer = new TimerGameObject(101, "timer");
-        timer.Position = new Vector2(25, 30);
-        Add(timer);
 
         quitButton = new Button("Sprites/spr_button_quit", 100);
         quitButton.Position = new Vector2(GameEnvironment.Screen.X - quitButton.Width - 10, 10);
@@ -50,6 +47,9 @@ partial class Level : GameObjectList
         Add(new GameObjectList(2, "bullets"));                      //nieuwe bullet Lis aan maken, op Layer twee, aangezien de enemies daar ook zitten.
 
         LoadTiles("Content/Levels/" + levelIndex + ".txt");
+        TimerGameObject timer = new TimerGameObject(time, 101, "timer");
+        timer.Position = new Vector2(25, 30);
+        Add(timer);
     }
 
     public bool Completed

@@ -353,7 +353,6 @@
     <Content Include="Content\Sprites\bullet.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\Sprites\bullet1.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\..\assets\ticktick\fonts\HintFont.xnb">

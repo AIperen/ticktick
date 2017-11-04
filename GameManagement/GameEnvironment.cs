@@ -16,7 +16,7 @@ public class GameEnvironment : Game
     protected static Random random;
     protected static AssetManager assetManager;
     protected static GameSettingsManager gameSettingsManager;
-    static Camera cam;
+    static Camera cam;                     //
 
     public GameEnvironment()
     {
@@ -28,7 +28,7 @@ public class GameEnvironment : Game
         random = new Random();
         assetManager = new AssetManager(Content);
         gameSettingsManager = new GameSettingsManager();
-        cam = new Camera();
+        cam = new Camera();             //
     }
 
     public static Point Screen
@@ -59,7 +59,7 @@ public class GameEnvironment : Game
 
     public static Camera Camera
     {
-        get { return cam; }
+        get { return cam; }                         //
     }
 
     public bool FullScreen
@@ -134,7 +134,7 @@ public class GameEnvironment : Game
     {
         HandleInput();
         gameStateManager.Update(gameTime);
-        cam.Update(gameTime);
+        cam.Update(gameTime);                               //
     }
 
     protected override void Draw(GameTime gameTime)
