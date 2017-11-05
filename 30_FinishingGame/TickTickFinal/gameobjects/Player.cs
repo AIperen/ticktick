@@ -15,7 +15,6 @@ partial class Player : AnimatedGameObject
     protected bool walkingOnIce, walkingOnHot;
     protected bool isShooting = false;          //in het begin staat shooting uit (false)
     protected float Clock;                      //timer voor hoevaak er geschoten mag worden
-
     public Player(Vector2 start) : base(2, "player")
     {
         LoadAnimation("Sprites/Player/spr_idle", "idle", true); 
@@ -87,7 +86,7 @@ partial class Player : AnimatedGameObject
     {
         base.Update(gameTime);
 
-        if (!finished && isAlive)
+            if (!finished && isAlive)
         {
             if (isOnTheGround)
             {
@@ -139,12 +138,13 @@ partial class Player : AnimatedGameObject
 
     public void Shoot()                            //Shoot methode, met Clock en bool isShooting voor schieten
     {
+        
         Bullet bullet = new Bullet(position);
-        bullet.Velocity = new Vector2(500, 0);
+        bullet.Velocity = new Vector2(800, 0);
 
         if (Mirror)                                 //andere kant op schieten
         {
-            bullet.Velocity = new Vector2(-500, 0);
+            bullet.Velocity = new Vector2(-800, 0);
         }                                
 
         (GameWorld.Find("bullets") as GameObjectList).Add(bullet);
@@ -165,9 +165,14 @@ partial class Player : AnimatedGameObject
         position.Y += 15;
         PlayAnimation("explode");
     }
+  
+        
+
 
     public void Die(bool falling)
-    {
+    {   
+           
+
         if (!isAlive || finished)
         {
             return;

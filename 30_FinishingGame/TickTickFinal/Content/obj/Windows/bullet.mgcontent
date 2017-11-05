@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Alijt Rijcken/Documents/GitHub/ticktick/30_FinishingGame/TickTickFinal/Content/bullet.png</SourceFile>
-  <SourceTime>2017-11-03T14:28:51.8708043+01:00</SourceTime>
-  <DestFile>C:/Users/Alijt Rijcken/Documents/GitHub/ticktick/30_FinishingGame/TickTickFinal/Content/bin/Windows/bullet.xnb</DestFile>
-  <DestTime>2017-11-03T16:45:01.2921004+01:00</DestTime>
+  <SourceFile>C:/Users/alper/OneDrive/Documenten/GitHub/ticktick2/30_FinishingGame/TickTickFinal/Content/bullet.png</SourceFile>
+  <SourceTime>2017-11-03T15:58:22.6982493+01:00</SourceTime>
+  <DestFile>C:/Users/alper/OneDrive/Documenten/GitHub/ticktick2/30_FinishingGame/TickTickFinal/Content/bin/Windows/bullet.xnb</DestFile>
+  <DestTime>2017-11-05T15:48:37.5661493+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2016-03-30T08:36:08+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -6,7 +6,7 @@ class Bullet : SpriteGameObject
     public Bullet( Vector2 position, int layer = 0, string id = "") : base ("bullet", layer, id)
     {   //Bullet Position
         this.position.Y = position.Y - 50; 
-        this.position.X = position.X + 50;
+        this.position.X = position.X;
 
     }
 
@@ -24,9 +24,14 @@ class Bullet : SpriteGameObject
             foreach (GameObject enemy in enemies.Children)
             {
                 SpriteGameObject spriteEnemy = (SpriteGameObject)enemy;
+                
+
                 if (CollidesWith(spriteEnemy) && visible)
                 {
                     spriteEnemy.Visible = false;
+                    spriteEnemy.Reset();
+                    visible = false;
+                    
                 }
             }
         }

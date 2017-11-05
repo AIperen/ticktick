@@ -9,7 +9,7 @@ class PlayingState : IGameLoopObject
     protected List<Level> levels;
     protected int currentLevelIndex;
     protected ContentManager content;
-
+    
     public PlayingState(ContentManager content)
     {
         this.content = content;
