@@ -5,8 +5,7 @@ using Microsoft.Xna.Framework;
 partial class Level : GameObjectList
 {
 
-    public double time; //
-    int nrRows; //
+    public double time;                             //
     public Vector2 LevelSize;
 
     public void LoadTiles(string path)
@@ -22,19 +21,19 @@ partial class Level : GameObjectList
         }
         
 
-        TileField tiles = new TileField(textLines.Count - 2, width, 1, "tiles");
+        TileField tiles = new TileField(textLines.Count - 2, width, 1, "tiles");  //initialize news Tile
 
         GameObjectList hintField = new GameObjectList(100);
 
         Add(hintField);
-        time = double.Parse(textLines[textLines.Count -1]);    ///laatste regel van de txt
-        //string hint = textLines[textLines.Count - 2];
+        time = double.Parse(textLines[textLines.Count -1]);             //laatste regel van de txt bestanden en leest dit als tijd
+        string hint = textLines[textLines.Count - 2];
         SpriteGameObject hintFrame = new SpriteGameObject("Overlays/spr_frame_hint", 1);
         hintFrame.CameraFollow = false;
         hintField.Position = new Vector2((GameEnvironment.Screen.X - hintFrame.Width) / 2, 10);
         hintField.Add(hintFrame);
         TextGameObject hintText = new TextGameObject("Fonts/HintFont", 2);
-        hintText.Text = textLines[textLines.Count - 2];
+        hintText.Text = textLines[textLines.Count - 2];                 //
         hintText.Position = new Vector2(120, 25);
         hintText.Color = Color.Black;
         hintField.Add(hintText);
@@ -46,7 +45,7 @@ partial class Level : GameObjectList
         tiles.CellHeight = 55;
         for (int x = 0; x < width; ++x)
         {
-            for (int y = 0; y < textLines.Count - 1; ++y)
+            for (int y = 0; y < textLines.Count - 2; ++y)
             {
                 Tile t = LoadTile(textLines[y][x], x, y);
                 tiles.Add(t, x, y);

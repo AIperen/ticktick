@@ -30,6 +30,7 @@ class Rocket : AnimatedGameObject
             spawnTime -= gameTime.ElapsedGameTime.TotalSeconds;
             return;
         }
+
         if(visible == false)                    //Zorgt dat Rocket verdwijnt als hij is geraakt
         {
             Reset();
@@ -40,6 +41,7 @@ class Rocket : AnimatedGameObject
         {
             this.velocity.X *= -1;
         }
+
         CheckPlayerCollision();
         // check if we are outside the screen
         Rectangle screenBox = new Rectangle(0, 0, GameEnvironment.Screen.X, GameEnvironment.Screen.Y);

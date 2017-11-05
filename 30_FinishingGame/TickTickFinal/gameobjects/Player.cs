@@ -13,8 +13,8 @@ partial class Player : AnimatedGameObject
     protected bool exploded;
     protected bool finished;
     protected bool walkingOnIce, walkingOnHot;
-    protected bool isShooting = false;
-    protected float Clock;
+    protected bool isShooting = false;          //in het begin staat shooting uit (false)
+    protected float Clock;                      //timer voor hoevaak er geschoten mag worden
 
     public Player(Vector2 start) : base(2, "player")
     {
@@ -35,7 +35,7 @@ partial class Player : AnimatedGameObject
         velocity = Vector2.Zero;
         isOnTheGround = true;
         isAlive = true;
-        isShooting = false;
+        isShooting = false;                 //als Reset() Shooting uit
         exploded = false;
         finished = false;
         walkingOnIce = false;
@@ -124,11 +124,11 @@ partial class Player : AnimatedGameObject
             {
                 Die(true);
             }
-            if (Clock <= 0f)
+            if (Clock <= 0f)                //Update de clock 
             {
                 isShooting = false;
             }
-            else if( Clock > 0f) 
+            else if( Clock > 0f)            // Clock voorwaarde
             {
                 Clock -= 1f;
             }
@@ -137,12 +137,15 @@ partial class Player : AnimatedGameObject
         DoPhysics();
     }
 
-    public void Shoot()                     //Shoot methode, met Clock en bool isShooting voor schieten
+    public void Shoot()                            //Shoot methode, met Clock en bool isShooting voor schieten
     {
         Bullet bullet = new Bullet(position);
         bullet.Velocity = new Vector2(500, 0);
-        if (Mirror)
+
+        if (Mirror)                                 //andere kant op schieten
+        {
             bullet.Velocity = new Vector2(-500, 0);
+        }                                
 
         (GameWorld.Find("bullets") as GameObjectList).Add(bullet);
         isShooting = true;

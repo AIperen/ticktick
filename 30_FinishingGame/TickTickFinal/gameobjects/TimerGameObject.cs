@@ -6,7 +6,7 @@ class TimerGameObject : TextGameObject
     protected TimeSpan timeLeft;
     protected bool running;
     protected double multiplier;
-    double Time;
+    double Time;                            //membervariable Time
 
     public TimerGameObject(double Time, int layer = 0, string id = "")
         : base("Fonts/Hud", layer, id)
@@ -14,7 +14,7 @@ class TimerGameObject : TextGameObject
         this.Time = Time;
         multiplier = 1;
         this.Time = Time;                   //zet de parameter = membervariabel
-        Level level = GameWorld as Level;
+        Level level = GameWorld as Level;   //
         timeLeft = TimeSpan.FromMinutes(Time);
         running = true;
     }

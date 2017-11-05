@@ -6,13 +6,13 @@ public class SpriteGameObject : GameObject
     protected SpriteSheet sprite;
     protected Vector2 origin;
     public bool PerPixelCollisionDetection = true;
-    public bool CameraFollow ;
+    public bool CameraFollow ;                  //
     public bool ParallaxFollow;                 //zorgt er voor dat wanneer true Parallax follow aan staat
 
     public SpriteGameObject(string assetName, int layer = 0, string id = "", int sheetIndex = 0, bool CameraFollow = true, bool ParallaxFollow = false)
         : base(layer, id)
     {
-        this.CameraFollow = CameraFollow;              
+        this.CameraFollow = CameraFollow;       //              
         
 
         if (assetName != "")
@@ -27,24 +27,22 @@ public class SpriteGameObject : GameObject
 
     public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
     {
+        Camera camera = GameEnvironment.Camera;                                     
         
-
-        Camera camera = GameEnvironment.Camera;
-        
-        if (!visible || sprite == null)
+        if (!visible || sprite == null)                                             // visible op 'niet waar' en sprite op null draw niks
         {
             return;
         }
-        if (CameraFollow == true && ParallaxFollow == false)
+        if (CameraFollow == true && ParallaxFollow == false)                        //als de camera 'aan' staat, maar de parallaxFollow uit: draw alleen ten opzichte van de camera.Position
         {
             sprite.Draw(spriteBatch, this.GlobalPosition - camera.Position, origin);
             
         }
-        else if (CameraFollow == false)
+        else if (CameraFollow == false)                                             //als cameraFollow 'uit'staat, draw op gwn positie
         {    
             sprite.Draw(spriteBatch, this.GlobalPosition, origin);
         }
-       if (ParallaxFollow == true)
+       if (ParallaxFollow == true)                                                  //Als parralaxFollow 'aan' staat, krijg je dus meerdere lagen die ten opzichte van elkaar ook nog eens bewegen
         {
             sprite.Draw(spriteBatch, new Vector2( this.GlobalPosition.X - camera.Position.X * 0.5f * layer, GlobalPosition.Y - camera.Position.Y), origin);
         }
