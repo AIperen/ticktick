@@ -61,11 +61,6 @@ class PlayingState : IGameLoopObject
         }
 
 
-       
-
-
-            //GameEnvironment.Camera.Position = player.GlobalPosition - GameEnvironment.Screen.ToVector2() / 2;
-
 
             GameObject player = CurrentLevel.Find("player");            //Camera positie en mee beweging
             if (player != null)
@@ -83,6 +78,7 @@ class PlayingState : IGameLoopObject
 
     public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
     {
+       
         CurrentLevel.Draw(gameTime, spriteBatch);
     }
 

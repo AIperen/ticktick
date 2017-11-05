@@ -33,7 +33,7 @@ partial class Level : GameObjectList
         hintField.Position = new Vector2((GameEnvironment.Screen.X - hintFrame.Width) / 2, 10);
         hintField.Add(hintFrame);
         TextGameObject hintText = new TextGameObject("Fonts/HintFont", 2);
-        hintText.Text = textLines[textLines.Count - 2];                 //
+        hintText.Text = hint;                 //
         hintText.Position = new Vector2(120, 25);
         hintText.Color = Color.Black;
         hintField.Add(hintText);

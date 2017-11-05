@@ -11,6 +11,7 @@ class LevelFinishedState : GameObjectList
         playingState = GameEnvironment.GameStateManager.GetGameState("playingState");
         SpriteGameObject overlay = new SpriteGameObject("Overlays/spr_welldone");
         overlay.CameraFollow = false;
+        overlay.ParallaxFollow = false;
         overlay.Position = new Vector2(GameEnvironment.Screen.X, GameEnvironment.Screen.Y) / 2 - overlay.Center;
         Add(overlay);
     }
