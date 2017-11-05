@@ -8,14 +8,12 @@ class TickTick : GameEnvironment
     {
         TickTick game = new TickTick();
         game.Run();
-       
     }
 
     public TickTick()
     {
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
-
     }
 
     protected override void LoadContent()
@@ -33,6 +31,6 @@ class TickTick : GameEnvironment
         gameStateManager.AddGameState("levelFinishedState", new LevelFinishedState());
         gameStateManager.SwitchTo("titleMenu");
 
-        //AssetManager.PlayMusic("Sounds/snd_music");
+        AssetManager.PlayMusic("Sounds/snd_music");
     }
 }

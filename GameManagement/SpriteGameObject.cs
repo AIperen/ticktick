@@ -27,16 +27,14 @@ public class SpriteGameObject : GameObject
 
     public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
     {
-        Camera camera = GameEnvironment.Camera;
-
-        
+        Camera camera = GameEnvironment.Camera;                                     
         
         if (!visible || sprite == null)                                             // visible op 'niet waar' en sprite op null draw niks
         {
             return;
         }
         if (CameraFollow == true && ParallaxFollow == false)                        //als de camera 'aan' staat, maar de parallaxFollow uit: draw alleen ten opzichte van de camera.Position
-        {DrawingHelper.DrawRectangle(BoundingBox, spriteBatch, Color.Red);
+        {
             sprite.Draw(spriteBatch, this.GlobalPosition - camera.Position, origin);
             
         }
@@ -46,7 +44,7 @@ public class SpriteGameObject : GameObject
         }
        if (ParallaxFollow == true)                                                  //Als parralaxFollow 'aan' staat, krijg je dus meerdere lagen die ten opzichte van elkaar ook nog eens bewegen
         {
-            sprite.Draw(spriteBatch, new Vector2( this.GlobalPosition.X - camera.Position.X * 0.2f * layer, GlobalPosition.Y - camera.Position.Y), origin);
+            sprite.Draw(spriteBatch, new Vector2( this.GlobalPosition.X - camera.Position.X * 0.5f * layer, GlobalPosition.Y - camera.Position.Y), origin);
         }
 
     }
@@ -93,15 +91,9 @@ public class SpriteGameObject : GameObject
     {
         get
         {
-           
-            {
-                
-                int left = (int)(GlobalPosition.X  - origin.X);
-                int top = (int)(GlobalPosition.Y - origin.Y);
-                return new Rectangle(left, top, Width, Height);
-            }
-          
-            
+            int left = (int)(GlobalPosition.X - origin.X);
+            int top = (int)(GlobalPosition.Y - origin.Y);
+            return new Rectangle(left, top, Width, Height);
         }
     }
 

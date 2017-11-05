@@ -31,10 +31,10 @@ class Rocket : AnimatedGameObject
             return;
         }
 
-        //if(visible == false)                    //Zorgt dat Rocket verdwijnt als hij is geraakt
-        //{
-        //    Reset();
-        //}
+        if(visible == false)                    //Zorgt dat Rocket verdwijnt als hij is geraakt
+        {
+            Reset();
+        }
         visible = true;
         velocity.X = 600;
         if (Mirror)
@@ -56,16 +56,15 @@ class Rocket : AnimatedGameObject
         Player player = GameWorld.Find("player") as Player;
         if (CollidesWith(player) && visible)
         {
-       
-           if (player.Position.Y + player.Height / 2 < this.position.Y)
+            if (player.GlobalPosition.Y + player.Height / 2 < this.position.Y)
             {
                 player.Jump(500);
-               Reset();
-           }
-           else
-           {
-               player.Die(false);
-           }
-    }       
+                Reset();
+            }
+            else
+            {
+                player.Die(false);
+            }
+        }       
     }
 }
